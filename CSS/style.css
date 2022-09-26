@@ -1,0 +1,19 @@
+h1{
+    color: gold;
+    text-align: center;
+}
+.baslik{
+    color: red;
+}
+h1.baslik{
+    color: pink;
+}
+* {
+    color: green;
+}
+p{
+    text-align: center;
+    color:white;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

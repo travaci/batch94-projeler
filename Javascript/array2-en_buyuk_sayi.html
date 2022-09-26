@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sayilar = [12,56,14,67,89,33,22];
+        let max = sayilar[0]; 
+        let min = sayilar[0];
+        for(let i=1; i<sayilar.length; i++){
+            if (max<sayilar[i]){
+                max=sayilar[i];
+            }
+            if (min>sayilar[i]){
+                min=sayilar[i];
+            }
+        }
+        console.log(`maximum=${max}  minimum=${min}`);
+    </script>
+</body>
+</html>

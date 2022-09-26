@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dizi = [13, 30, 75, 42, 105, 94, 56, 62, 84, 130];
+        function ortalama(){
+            let toplam=0;
+            for(let i=0; i<dizi.length; i++){
+            toplam += dizi[i];
+            }
+            return toplam/dizi.length;
+        }
+
+        
+
+        function ortalamadanKucuk(){
+            let say=0;
+            for(let i=0; i<dizi.length; i++){
+                if(dizi[i]<ortalama()) {
+                    say++;
+                }
+            }
+            return say;
+        }
+
+        alert(`Dizinin ortalamasi:${ortalama()}\nOrtalamanin altinda ${ortalamadanKucuk()} sayi var.`);
+    </script>
+</body>
+</html>

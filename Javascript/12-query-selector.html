@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="kutu" id="kutu1">Ana sayfa</li>
+            <li class="kutu">Hakkimizda</li>
+            <li class="kutu">Iletisim</li>
+        </ul>
+    </nav>
+    
+    <script>
+        let menu1 = document.querySelector(".menu");
+        console.log(menu1);
+
+        let sec = document.querySelector("#kutu1");
+        console.log(sec.innerText); //Ana sayfa
+        sec.innerText = "Merhaba Dunya"; //sec variable indaki text i degisitirdik
+        sec.innerHTML = "<b>Merhaba Dunya</b>" //HTML tag lerini algilamasi icin innerHTML metodunu kullaniyoruz
+
+        let hepsi = document.querySelectorAll(".kutu");
+        console.log(hepsi);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="sayi">
+    
+    <button onclick="hesapla()">Hesapla</button><br><br>
+
+    <div id="sonuc"></div>
+
+    <script>
+        function hesapla(){
+            let sayi = document.querySelector("#sayi").value;
+            let sonuc;
+           
+            switch (true) {
+            case (sayi>1500):
+                sonuc = sayi * 0.85;
+                break;
+            case (sayi>1000):
+                sonuc = sayi * 0.87;
+                break;
+            case (sayi>700):
+                sonuc = sayi * 0.90;
+                break;    
+            case (sayi>500):
+                sonuc = sayi * 0.93;
+                break;
+            case (sayi>300):
+                sonuc = sayi * 0.95;
+                break;
+            default:
+                sonuc = sayi * 0.98;
+           }
+            document.querySelector("#sonuc").innerHTML=`Sonuc=<b>${sonuc}</b>`;
+        }
+       
+    </script>
+</body>
+</html>

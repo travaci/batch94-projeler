@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="num1" placeholder="Initial value"><br>
+    <input type="number" name="" id="num2" placeholder="Final value"><br>
+    <button onclick="calculate()">Calculate</button>
+    <h1 id="result"></h1>
+
+    <script>
+        function calculate(){
+        let num1 = Number(document.querySelector("#num1").value);
+        let num2 = Number(document.querySelector("#num2").value);
+        let result="";
+        let count=0;
+        let temp;
+        if(num1>num2){
+            temp = num1; num1 = num2 ; num2 = temp;
+        }
+        if(num1==0 || num2==0) {
+            alert("Input a valid number.");
+            return;
+        }
+        for(let i = num1; i<=num2; i++){
+            if (i%7==0){
+                count++;
+                result = result + String(i) + ",";
+            }
+        }
+        document.querySelector("#result").innerHTML = "There are " + count + " numbers between "+ num1+"-"+num2+" divisible by 7<br>"+result;
+    }
+    </script>
+
+</body>
+</html>

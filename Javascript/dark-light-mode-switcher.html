@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darkMode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="Dark mode" id="btnMode" onclick="modChange()">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rem perferendis tempore, atque corrupti ab sed
+        eos! Nemo quaerat assumenda dolor quos non, suscipit doloribus, fuga minus, odio aliquam sequi?
+    </p>
+    <script>
+        let mod = "light";
+
+        function modChange() {
+            if (mod == "light") {
+                document.querySelector("body").classList.add("darkMode");
+                document.querySelector("#btnMode").value = "Light Mode";
+                mod = "dark";
+            } else {
+                document.querySelector("body").classList.remove("darkMode");
+                document.querySelector("#btnMode").value = "Dark Mode";
+                mod = "light";
+            }
+        }
+    </script>
+</body>
+
+</html>

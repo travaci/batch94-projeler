@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="gun" min="1" max="7">
+    <input type="button" value="Goster" onclick="gunGoster()">
+    <div id="gunIsmi"></div>
+
+    <script>
+        function gunGoster(){
+        let gunSayisi = document.querySelector('#gun').value;
+        switch (Number(gunSayisi)){
+            case 1:
+                document.querySelector("#gunIsmi").innerHTML = "Pazar";
+                break;
+            case 2:
+                document.querySelector("#gunIsmi").innerHTML = "Pazartesi";
+                break;
+            case 3:
+                document.querySelector("#gunIsmi").innerHTML = "Sali";
+                break;
+            case 4:
+                document.querySelector("#gunIsmi").innerHTML = "Carsamba";
+                break;
+            case 5:
+                document.querySelector("#gunIsmi").innerHTML = "Persembe";
+                break;
+            case 6:
+                document.querySelector("#gunIsmi").innerHTML = "Cuma";
+                break;
+            case 7:
+                document.querySelector("#gunIsmi").innerHTML = "Cumartesi";
+                break;   
+        }
+        }
+    </script>
+</body>
+</html>

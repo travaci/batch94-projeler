@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="sayi1">
+    <input type="number" id="sayi2">
+    <button onclick="hesapla()">Hesapla</button><br><br>
+    Islem turu:
+    <select name="islem" id="islem">
+        <option value="1">Topla</option>
+        <option value="2">Cikar</option>
+        <option value="3">Carp</option>
+        <option value="4">Bol</option>
+    </select>
+
+    <div id="sonuc"></div>
+
+    <script>
+        function hesapla(){
+            let sayi1 = document.querySelector("#sayi1").value;
+            let sayi2 = document.querySelector("#sayi2").value;
+            let sonuc;
+            let islem = Number(document.querySelector("#islem").value);
+           
+            switch (islem) {
+            case 1:
+                sonuc = Number(sayi1) + Number(sayi2);
+                break;
+            case 2:
+                sonuc = Number(sayi1) - Number(sayi2);
+                break;
+            case 3:
+                sonuc = Number(sayi1) * Number(sayi2);
+                break;    
+            case 4:
+                sonuc = Number(sayi1) / Number(sayi2);
+                break;
+            default:
+                break;
+           }
+            document.querySelector("#sonuc").innerHTML=`Sonuc=<b>${sonuc}</b>`;
+        }
+       
+    </script>
+</body>
+</html>
